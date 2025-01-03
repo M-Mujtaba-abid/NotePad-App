@@ -91,7 +91,7 @@ export const pasteSlice = createSlice({
    
       const findItem = state.pates.find((item) => item.title === paste.title);
       if (!findItem) {
-        state.pates.push(paste);
+        state.pates[index] = paste
         toast.success("Updated Paste successfully!");
       } else {
         toast.error("Paste already exists!");
